@@ -1,2 +1,0 @@
-# barathikanna.github.io
-portfolio

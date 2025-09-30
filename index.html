@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barathi Kanna Saminathan - AI & Data Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a;
+            color: #e2e8f0;
+        }
+        .gradient-blur {
+            animation: pulse-bg 12s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        @keyframes pulse-bg {
+            0%, 100% { opacity: 0.2; transform: scale(1); }
+            50% { opacity: 0.3; transform: scale(1.05); }
+        }
+        .underline-hover {
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-image: linear-gradient(to right, #d97706, #f59e0b);
+            transition: width 0.3s ease-in-out;
+        }
+        .group:hover .underline-hover {
+            width: 100%;
+        }
+        .nav-link.active {
+            color: #f59e0b; /* Amber 600 */
+        }
+        .nav-link.active .underline-hover {
+            width: 100%;
+        }
+        .section-title {
+             /* Increased font size for better visibility */
+             @apply text-5xl sm:text-6xl font-bold mb-16 text-center tracking-tighter;
+        }
+        .section-paragraph {
+            @apply text-lg text-slate-300 leading-relaxed;
+        }
+        .info-card {
+            @apply bg-slate-800/40 p-6 rounded-lg border border-slate-700/80 hover:border-amber-600/40 transition-all duration-300 group hover:shadow-lg hover:shadow-amber-800/10;
+        }
+        .info-card-icon {
+            @apply w-10 h-10 text-amber-600 mb-3 group-hover:scale-110 transition-transform duration-300;
+        }
+        .info-card-title {
+            @apply font-semibold mb-1 text-md text-slate-100;
+        }
+        .info-card-desc {
+            @apply text-sm text-slate-400;
+        }
+        .course-tag {
+            @apply inline-block text-xs font-medium bg-slate-700 text-slate-300 px-2 py-1 rounded-full;
+        }
+    </style>
+</head>
+<body class="bg-[#0a0a0a] text-slate-200">
+
+    <!-- Container for everything -->
+    <div class="min-h-screen relative overflow-x-hidden">
+        
+        <!-- Animated gradient background -->
+        <div class="fixed inset-0 overflow-hidden pointer-events-none z-0">
+            <div class="absolute top-0 -left-1/4 w-96 h-96 sm:w-[32rem] sm:h-[32rem] bg-amber-800/20 rounded-full blur-3xl gradient-blur"></div>
+            <div class="absolute -bottom-1/4 right-0 w-96 h-96 sm:w-[32rem] sm:h-[32rem] bg-slate-700/20 rounded-full blur-3xl gradient-blur" style="animation-delay: 2s;"></div>
+            <div class="absolute top-1/2 left-1/2 w-80 h-80 sm:w-[28rem] sm:h-[28rem] bg-amber-900/10 rounded-full blur-3xl gradient-blur" style="animation-delay: 4s;"></div>
+        </div>
+
+        <!-- Navigation -->
+        <nav id="navbar" class="fixed w-full z-50 transition-all duration-300">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center py-5">
+                    <a href="#home" class="text-3xl font-bold bg-gradient-to-r from-amber-500 via-amber-600 to-amber-700 bg-clip-text text-transparent">
+                        BK
+                    </a>
+                    <div class="hidden md:flex items-center space-x-8">
+                        <a href="#home" class="nav-link text-gray-300 hover:text-amber-600 transition-colors duration-300 font-medium relative group">Home<span class="underline-hover"></span></a>
+                        <a href="#about" class="nav-link text-gray-300 hover:text-amber-600 transition-colors duration-300 font-medium relative group">About<span class="underline-hover"></span></a>
+                        <a href="#skills" class="nav-link text-gray-300 hover:text-amber-600 transition-colors duration-300 font-medium relative group">Skills<span class="underline-hover"></span></a>
+                        <a href="#experience" class="nav-link text-gray-300 hover:text-amber-600 transition-colors duration-300 font-medium relative group">Experience<span class="underline-hover"></span></a>
+                        <a href="#education" class="nav-link text-gray-300 hover:text-amber-600 transition-colors duration-300 font-medium relative group">Education<span class="underline-hover"></span></a>
+                        <a href="#projects" class="nav-link text-gray-300 hover:text-amber-600 transition-colors duration-300 font-medium relative group">Projects<span class="underline-hover"></span></a>
+                        <a href="#contact" class="nav-link text-gray-300 hover:text-amber-600 transition-colors duration-300 font-medium relative group">Contact<span class="underline-hover"></span></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <main class="relative z-10">
+
+            <!-- Hero Section -->
+            <section id="home" class="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-24 pb-12">
+                <div class="max-w-7xl w-full grid md:grid-cols-2 gap-16 items-center">
+                    <div class="space-y-6 relative z-10 text-center md:text-left">
+                        <div class="text-amber-600 text-lg font-semibold tracking-wide">Hello, I'm</div>
+                        <h1 class="text-5xl lg:text-7xl font-extrabold leading-tight tracking-tighter">
+                            Barathi Kanna Saminathan
+                            <span class="block text-4xl lg:text-5xl mt-3 bg-gradient-to-r from-amber-500 via-amber-600 to-amber-700 bg-clip-text text-transparent">
+                                AI & Data Engineer
+                            </span>
+                        </h1>
+                        <p class="text-lg text-slate-400 leading-relaxed max-w-xl mx-auto md:mx-0">
+                            Specializing in Multimodal AI, LLMs, and RAG Systems. Building intelligent solutions with explainable AI and cloud-native architectures.
+                        </p>
+                        <div class="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 pt-4">
+                            <a href="mailto:barathikanna07@gmail.com" class="group relative px-6 py-3 bg-gradient-to-r from-amber-600 to-amber-700 text-white rounded-lg font-semibold shadow-lg shadow-amber-900/30 hover:shadow-amber-800/40 transition-all duration-300 overflow-hidden w-full sm:w-auto text-center">
+                                <span class="relative flex items-center justify-center gap-2"><i data-lucide="mail" class="w-5 h-5"></i> Get In Touch</span>
+                            </a>
+                            <!-- 
+                                ADD YOUR RESUME HERE:
+                                To make this button work, add a file named "resume.pdf" 
+                                to the same folder as this index.html file.
+                            -->
+                            <a href="./BarathiKannaSaminathan_CV.pdf" download="Barathi-Kanna-CV.pdf" class="group relative px-6 py-3 border-2 border-amber-600/80 text-amber-600 hover:bg-amber-600 hover:text-white rounded-lg font-semibold transition-all duration-300 w-full sm:w-auto text-center">
+                                <span class="relative flex items-center justify-center gap-2"><i data-lucide="download" class="w-5 h-5"></i> Download CV</span>
+                            </a>
+                        </div>
+                         <div class="flex items-center justify-center md:justify-start gap-4 pt-6">
+                                <a href="https://linkedin.com/in/barathikanna" target="_blank" rel="noopener noreferrer" class="p-3 text-slate-400 hover:text-amber-600 transition-all duration-300"><i data-lucide="linkedin" class="w-7 h-7"></i></a>
+                                <a href="https://github.com/barathikanna07" target="_blank" rel="noopener noreferrer" class="p-3 text-slate-400 hover:text-amber-600 transition-all duration-300"><i data-lucide="github" class="w-7 h-7"></i></a>
+                            </div>
+                    </div>
+                    <div class="hidden md:flex justify-center relative">
+                        <div class="relative group">
+                            <!-- 
+                                === YOUR PROFILE PICTURE GOES HERE ===
+                                1. Add your photo (e.g., "profile-photo.jpg") to the same folder as this file.
+                                2. Change the src below from the placeholder URL to "./profile-photo.jpg".
+                            -->
+                            <img src="./profile-photo.jpg" 
+                                 alt="Barathi Kanna Saminathan"
+                                 onerror="this.onerror=null;this.src='https://placehold.co/384x384/0a0a0a/d97706?text=BK&font=inter';"
+                                 class="w-80 h-80 lg:w-96 lg:h-96 rounded-full object-cover border-4 border-slate-700/80 shadow-2xl shadow-amber-900/20 group-hover:border-amber-600/30 transition-all duration-500">
+                            
+                            <!-- Background Glow Effect -->
+                            <div class="absolute -inset-8 bg-gradient-to-br from-amber-800/10 to-transparent rounded-full blur-3xl -z-10 group-hover:scale-110 transition-transform duration-700"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section id="about" class="py-24 sm:py-32 px-4 sm:px-6 lg:px-8">
+                <div class="max-w-7xl mx-auto">
+                    <h2 class="section-title"><span class="bg-gradient-to-r from-amber-500 via-amber-600 to-amber-700 bg-clip-text text-transparent">About Me</span></h2>
+                    <div class="grid md:grid-cols-5 gap-12 items-center">
+                        <div class="md:col-span-3 space-y-6">
+                            <p class="section-paragraph">I'm an AI & Data Engineering practitioner with a passion for building intelligent, explainable systems. Completed my masters in AI & ML at the University of Birmingham.</p>
+                            <p class="section-paragraph">My expertise spans multimodal AI, Large Language Models, RAG systems, and cloud-native architectures. I've successfully deployed production-grade AI solutions integrating speech, text, and vision pipelines.</p>
+                            <p class="section-paragraph">With a background in database administration, data engineering and infrastructure engineering, I bring a unique perspective to AI development, ensuring solutions are not only intelligent but also scalable and maintainable.</p>
+                        </div>
+                        <div class="md:col-span-2 grid grid-cols-2 gap-4">
+                            <div class="info-card"><i data-lucide="brain" class="info-card-icon"></i><h3 class="info-card-title">AI & ML</h3><p class="info-card-desc">LLMs, RAG, XAI</p></div>
+                            <div class="info-card"><i data-lucide="database" class="info-card-icon"></i><h3 class="info-card-title">Data Engineering</h3><p class="info-card-desc">Kafka, ETL</p></div>
+                            <div class="info-card"><i data-lucide="cloud" class="info-card-icon"></i><h3 class="info-card-title">Cloud Native</h3><p class="info-card-desc">AWS, Azure</p></div>
+                            <div class="info-card"><i data-lucide="code" class="info-card-icon"></i><h3 class="info-card-title">Full Stack</h3><p class="info-card-desc">Python, SQL</p></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Skills Section -->
+            <section id="skills" class="py-24 sm:py-32 px-4 sm:px-6 lg:px-8 bg-slate-900/20">
+                <div class="max-w-7xl mx-auto">
+                    <h2 class="section-title"><span class="bg-gradient-to-r from-amber-500 via-amber-600 to-amber-700 bg-clip-text text-transparent">Technical Skills</span></h2>
+                    <div class="space-y-8" id="skills-container">
+                        <!-- Skills will be injected here by JavaScript -->
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Experience Section -->
+            <section id="experience" class="py-24 sm:py-32 px-4 sm:px-6 lg:px-8">
+                <div class="max-w-7xl mx-auto">
+                    <h2 class="section-title"><span class="bg-gradient-to-r from-amber-500 via-amber-600 to-amber-700 bg-clip-text text-transparent">Experience</span></h2>
+                    <div class="space-y-8" id="experience-container">
+                        <!-- Experience will be injected here by JavaScript -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Education Section -->
+            <section id="education" class="py-24 sm:py-32 px-4 sm:px-6 lg:px-8 bg-slate-900/20">
+                <div class="max-w-7xl mx-auto">
+                    <h2 class="section-title"><span class="bg-gradient-to-r from-amber-500 via-amber-600 to-amber-700 bg-clip-text text-transparent">Education</span></h2>
+                    <div class="space-y-8" id="education-container">
+                        <!-- Education will be injected here by JavaScript -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+             <section id="projects" class="py-24 sm:py-32 px-4 sm:px-6 lg:px-8">
+                <div class="max-w-7xl mx-auto">
+                    <h2 class="section-title"><span class="bg-gradient-to-r from-amber-500 via-amber-600 to-amber-700 bg-clip-text text-transparent">Featured Projects</span></h2>
+                    <div id="projects-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- Projects will be injected here -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Publications Section -->
+            <section id="publications" class="py-24 sm:py-32 px-4 sm:px-6 lg:px-8 bg-slate-900/20">
+                 <div class="max-w-7xl mx-auto">
+                    <h2 class="section-title"><span class="bg-gradient-to-r from-amber-500 via-amber-600 to-amber-700 bg-clip-text text-transparent">Publications</span></h2>
+                    <div class="grid md:grid-cols-2 gap-8" id="publications-container">
+                        <!-- Publications will be injected here by JavaScript -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact" class="py-24 sm:py-32 px-4 sm:px-6 lg:px-8">
+                 <div class="max-w-3xl mx-auto text-center">
+                    <h2 class="section-title"><span class="bg-gradient-to-r from-amber-500 via-amber-600 to-amber-700 bg-clip-text text-transparent">Let's Connect</span></h2>
+                    <p class="section-paragraph mt-4 mb-8">I'm always interested in discussing AI projects, research opportunities, or potential collaborations. Feel free to reach out!</p>
+                    <a href="mailto:barathikanna07@gmail.com" class="group inline-block relative px-10 py-4 bg-gradient-to-r from-amber-600 to-amber-700 text-white rounded-lg font-semibold text-lg shadow-lg shadow-amber-900/30 hover:shadow-amber-800/40 transition-all duration-300">
+                        <span class="relative flex items-center justify-center gap-2"><i data-lucide="mail" class="w-6 h-6"></i> Email Me</span>
+                    </a>
+                </div>
+            </section>
+
+        </main>
+        
+        <!-- Footer -->
+        <footer class="py-12 px-4 sm:px-6 lg:px-8 border-t border-slate-800/50 relative">
+            <div class="max-w-7xl mx-auto text-center text-slate-400">
+                <p id="footer-text" class="text-md"></p>
+                <p class="text-sm mt-2">Crafted with passion for AI and innovation.</p>
+            </div>
+        </footer>
+
+    </div>
+
+    <script>
+        // --- DATA ---
+        const skillsData = [
+            { category: 'Programming Languages', skills: [ { name: 'Python', logo: '.../python/python-original.svg' }, { name: 'C++', logo: '.../cplusplus/cplusplus-original.svg' }, { name: 'Linux Shell', logo: '.../bash/bash-original.svg' }, { name: 'Oracle SQL', logo: '.../oracle/oracle-original.svg' }, { name: 'SQL', logo: '.../mysql/mysql-original.svg' } ] },
+            { category: 'Distributed Systems', skills: [ { name: 'Kafka', logo: '.../apachekafka/apachekafka-original.svg' }, { name: 'Elasticsearch', logo: 'https://static.elastic.co/v3/assets/bltefdd0b53724fa2ce/blt36f2da8d650732a0/5d0823c3d8ff351753cbc99f/logo-elasticsearch-32-color.svg' }, { name: 'Logstash', logo: 'https://static.elastic.co/v3/assets/bltefdd0b53724fa2ce/blt86987d6438a069a2/5d0823b10b7cd8175390e668/logo-logstash-32-color.svg' }, { name: 'Grafana', logo: '.../grafana/grafana-original.svg' }, { name: 'Prometheus', logo: '.../prometheus/prometheus-original.svg' } ] },
+            { category: 'Database', skills: [ { name: 'Oracle', logo: '.../oracle/oracle-original.svg' }, { name: 'SQL Server', logo: '.../microsoftsqlserver/microsoftsqlserver-plain.svg' } ] },
+            { category: 'Cloud & Automation', skills: [ { name: 'AWS', logo: '.../amazonwebservices/amazonwebservices-original.svg' }, { name: 'Azure Cognitive Services', logo: '.../azure/azure-original.svg' }, { name: 'Terraform', logo: '.../terraform/terraform-original.svg' }, { name: 'Ansible', logo: '.../ansible/ansible-original.svg' }, { name: 'CI/CD', logo: '.../jenkins/jenkins-line.svg' } ] },
+            { category: 'Machine Learning & AI', skills: [ { name: 'LLMs (Ollama)', logo: 'https://ollama.com/public/ollama.png' }, { name: 'AI Agents', logo: null, icon: 'bot' }, { name: 'LangChain', logo: 'https://python.langchain.com/img/brand/wordmark.png' }, { name: 'XGBoost', logo: 'https://raw.githubusercontent.com/dmlc/xgboost/master/doc/logo/xgboost-logo.png' }, { name: 'Scikit-learn', logo: 'https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg' }, { name: 'TensorFlow', logo: '.../tensorflow/tensorflow-original.svg' }, { name: 'NLP', logo: null, icon: 'file-text' }, { name: 'TTS', logo: null, icon: 'volume-2' } ] },
+            { category: 'Vector DBs & RAG', skills: [ { name: 'ChromaDB', logo: 'https://www.trychroma.com/logo.png' }, { name: 'FAISS', logo: 'https://raw.githubusercontent.com/facebookresearch/faiss/main/docs/logo.png' } ] },
+            { category: 'Data Visualization', skills: [ { name: 'Streamlit', logo: 'https://streamlit.io/images/brand/streamlit-logo-primary-colormark.svg' }, { name: 'Power BI', logo: 'https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg' }, { name: 'Matplotlib', logo: '.../matplotlib/matplotlib-original.svg' }, { name: 'Seaborn', logo: '.../seaborn/seaborn-original.svg' }, { name: 'Kibana', logo: 'https://static.elastic.co/v3/assets/bltefdd0b53724fa2ce/blt56d81e3a7615024b/5d0823a3d8ff351753cbc99b/logo-kibana-32-color.svg' } ] },
+            { category: 'Other Tools', skills: [ { name: 'Jira', logo: '.../jira/jira-original.svg' }, { name: 'Agile/Scrum', logo: null, icon: 'users' }, { name: 'SDLC', logo: null, icon: 'recycle' }, { name: 'DevOps', logo: null, icon: 'infinity' }, { name: 'Microsoft Certified', logo: '.../microsoft/microsoft-original.svg'} ] }
+        ];
+
+        const experienceData = [
+            { 
+                title: 'ML Engineer Intern', 
+                company: 'UoB & Neptune Submerge',
+                logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/University_of_Birmingham_logo.svg/2560px-University_of_Birmingham_logo.svg.png', // Switched to a reliable SVG
+                period: 'July 2025 – August 2025', 
+                location: 'Remote, UK', 
+                highlights: [
+                    'Designed a Retrieval-Augmented Generation (RAG) voice assistant using Ollama-LLaMA, LangChain, and Nomic embeddings, integrating it into the existing VR system.',
+                    'Implemented speech-to-text (Vosk) and text-to-speech (Azure Cognitive Services) for real-time voice interaction.',
+                    'Stored knowledge in ChromaDB vector database for high-speed semantic retrieval.',
+                    'Built a Tkinter-based prototype to demonstrate AI-driven voice conversations with domain-specific knowledge.'
+                ] 
+            },
+            { 
+                title: 'Oracle Database Administrator (KELK Stack)', 
+                company: 'Epsilon',
+                logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Epsilon_Logo.svg/1024px-Epsilon_Logo.svg.png',
+                period: 'Sep 2022 – Aug 2024', 
+                location: 'Bangalore, India', 
+                highlights: [
+                    'Automated OS patching across 296+ servers using Ansible, reducing manual effort by 80% and saving over 150 engineering hours per quarter.',
+                    'Led the migration from Cloudera Kafka to Confluent Kafka, achieving 99.99% uptime, cutting infrastructure costs by 60%, and improving message throughput by 35%.',
+                    'Scaled AWS infrastructure to support real-time data flows, resulting in a 25% increase in system responsiveness during peak usage.',
+                    'Optimized Elasticsearch clusters and built custom Logstash pipelines, reducing query latency by 40% and improving data ingestion efficiency by 30%.',
+                    'Resolved over 100 high-impact database incidents during on-call shifts, enhancing overall system reliability and reducing downtime.'
+                ] 
+            },
+            { 
+                title: 'Assistant System Engineer', 
+                company: 'TCS', 
+                logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/TCS_logo.svg/2560px-TCS_logo.svg.png',
+                period: 'May 2021 - Sep 2022', 
+                location: 'Bangalore, India', 
+                highlights: [
+                    'Certified 35+ high-risk applications for Morgan Stanley\'s Access Management, reducing security related incidents by 90%.',
+                    'Automated Jira reporting reducing time from 3hrs to 5min', 
+                    'Built Python dashboard improving delivery efficiency by 25%'
+                ] 
+            }
+        ];
+        
+        const educationData = [
+            { 
+                degree: 'MSc Artificial Intelligence and Machine Learning', 
+                school: 'University of Birmingham',
+                logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/University_of_Birmingham_logo.svg/2560px-University_of_Birmingham_logo.svg.png',
+                period: '2024 - 2025', 
+                location: 'Birmingham, UK',
+                courses: ['Neural Computation', 'Machine Learning', 'Natural Language Processing', 'Intelligent Data Analysis', 'Deep Learning', 'Reinforcement Learning']
+            },
+            { 
+                degree: 'BTech Electronics and Communication Engineering', 
+                school: 'Amrita Vishwa Vidyapeetham',
+                logo: 'https://upload.wikimedia.org/wikipedia/en/thumb/5/53/Amrita-vishwa-vidyapeetham-color-logo.png/330px-Amrita-vishwa-vidyapeetham-color-logo.png',
+                period: '2017 - 2021', 
+                location: 'Coimbatore, India',
+                courses: ['Digital Signal Processing', 'VLSI Design', 'Communication Systems', 'Embedded Systems', 'Data Structures', 'C++', 'Computer Architecture']
+            }
+        ];
+
+        const publicationsData = [
+            { title: 'Smart Shop Surveillance System', publisher: 'Springer', description: 'Multimodal AI solution with IoT temperature checks and CNN-based face mask detection.', doi: 'https://link.springer.com/chapter/10.1007/978-981-16-2422-3_55' },
+            { title: 'Low-Cost Smart Navigation System for the Blind', publisher: 'IEEE', description: 'Navigation system using vibration motors for turn indications.', doi: 'https://doi.org/10.1109/ICACCS51430.2021.9442056' }
+        ];
+
+        const projectsData = [
+            { name: 'RAG-Voice-Assistant', html_url: 'https://github.com/barathikanna/Conversational-Voice-bot.git', description: 'Voice-enabled RAG system with Vosk STT and Azure TTS integrated into VR environment', language: 'Python', stargazers_count: 15 },
+            { name: 'Churn360-Ecomm', html_url: 'https://github.com/barathikanna/Churn_XAI.git', description: 'Multimodal Explainable AI Framework for E-commerce Customer Churn Prediction using XGBoost, SHAP, LIME, and DiCE', language: 'Python', stargazers_count: 12 },
+            { name: 'Scientific-Journal-Parser', html_url: 'https://github.com/barathikanna/research_assistant.git', description: 'AI-powered research paper parser with RAG chatbot using LangChain, ChromaDB, and LLaMA3', language: 'Python', stargazers_count: 8 }
+        ];
+
+        // --- DYNAMIC CONTENT INJECTION ---
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- Skills ---
+            const skillsContainer = document.getElementById('skills-container');
+            const deviconBaseUrl = 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/';
+            skillsData.forEach(cat => {
+                const skillsHtml = cat.skills.map(skill => {
+                    let logoHtml;
+                    if (skill.logo) {
+                        const logoUrl = skill.logo.startsWith('...') ? `${deviconBaseUrl}${skill.logo.substring(3)}` : skill.logo;
+                        logoHtml = `<img src="${logoUrl}" alt="${skill.name}" class="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                    <div class="hidden w-10 h-10 flex items-center justify-center"><i data-lucide="file-code-2" class="w-8 h-8 text-slate-500"></i></div>`;
+                    } else if (skill.icon) {
+                        logoHtml = `<div class="w-10 h-10 flex items-center justify-center"><i data-lucide="${skill.icon}" class="w-8 h-8 text-amber-600 group-hover:scale-110 transition-transform duration-300"></i></div>`;
+                    } else {
+                        logoHtml = `<div class="w-10 h-10 flex items-center justify-center"><i data-lucide="file-code-2" class="w-8 h-8 text-slate-500"></i></div>`;
+                    }
+
+                    return `<div class="flex flex-col items-center gap-2 p-3 text-center bg-slate-800/40 rounded-lg border border-slate-700/80 group hover:bg-slate-800/80 transition-colors duration-300">
+                                ${logoHtml}
+                                <span class="text-xs text-slate-400 font-medium">${skill.name}</span>
+                            </div>`;
+                }).join('');
+
+                skillsContainer.innerHTML += `<div class="bg-slate-800/40 p-6 rounded-lg border border-slate-700/80">
+                                                <h3 class="text-xl font-semibold mb-6 text-amber-600">${cat.category}</h3>
+                                                <div class="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-5 gap-4">${skillsHtml}</div>
+                                              </div>`;
+            });
+
+            // --- Experience ---
+            const experienceContainer = document.getElementById('experience-container');
+            experienceData.forEach(exp => {
+                 const highlightsHtml = exp.highlights.map(h => `<li class="flex items-start gap-3"><span class="text-amber-600 mt-1 text-lg">▹</span><span>${h}</span></li>`).join('');
+                 experienceContainer.innerHTML += `<div class="bg-slate-800/40 p-8 rounded-lg border border-slate-700/80 group hover:border-amber-600/30 transition-all duration-300">
+                                                    <div class="flex flex-col sm:flex-row items-start gap-6">
+                                                        <div class="w-20 h-20 flex-shrink-0 bg-slate-700/50 rounded-lg p-2 flex items-center justify-center border border-slate-600">
+                                                           <img src="${exp.logo}" alt="${exp.company} logo" class="object-contain h-full w-full group-hover:scale-105 transition-transform duration-300" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                                           <div class="hidden w-full h-full items-center justify-center text-amber-600 text-2xl font-bold">${exp.company.substring(0, 3).toUpperCase()}</div>
+                                                        </div>
+                                                        <div class="flex-1">
+                                                            <h3 class="text-xl font-semibold mb-1 text-slate-100">${exp.title}</h3>
+                                                            <div class="text-amber-600 font-medium mb-1">${exp.company}</div>
+                                                            <div class="text-slate-400 text-sm mb-4">${exp.period} • ${exp.location}</div>
+                                                            <ul class="space-y-2 text-slate-300">${highlightsHtml}</ul>
+                                                        </div>
+                                                    </div>
+                                                  </div>`;
+            });
+            
+            // --- Education ---
+            const educationContainer = document.getElementById('education-container');
+            educationData.forEach(edu => {
+                 const coursesHtml = edu.courses.map(course => `<li class="course-tag">${course}</li>`).join('');
+                 educationContainer.innerHTML += `<div class="bg-slate-800/40 p-8 rounded-lg border border-slate-700/80 group hover:border-amber-600/30 transition-all duration-300">
+                                                    <div class="flex flex-col sm:flex-row items-start gap-6">
+                                                        <div class="w-20 h-20 flex-shrink-0 bg-slate-700/50 rounded-lg p-2 flex items-center justify-center border border-slate-600">
+                                                           <img src="${edu.logo}" alt="${edu.school} logo" class="object-contain h-full w-full group-hover:scale-105 transition-transform duration-300" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                                           <div class="hidden w-full h-full items-center justify-center text-amber-600 text-xl font-bold">${edu.school.split(' ').map(s => s[0]).join('')}</div>
+                                                        </div>
+                                                        <div class="flex-1">
+                                                            <h3 class="text-xl font-semibold mb-1 text-slate-100">${edu.degree}</h3>
+                                                            <div class="text-amber-600 font-medium mb-1">${edu.school}</div>
+                                                            <div class="text-slate-400 text-sm mb-4">${edu.period} • ${edu.location}</div>
+                                                            <h4 class="text-sm font-semibold text-slate-300 mb-2">Relevant Coursework:</h4>
+                                                            <ul class="flex flex-wrap gap-2">${coursesHtml}</ul>
+                                                        </div>
+                                                    </div>
+                                                  </div>`;
+            });
+
+            // --- Projects ---
+            const projectsContainer = document.getElementById('projects-container');
+            if (projectsData.length === 0) {
+                projectsContainer.innerHTML = `<p class="text-slate-400 md:col-span-2 lg:col-span-3 text-center">No public projects found.</p>`;
+            } else {
+                projectsData.forEach(repo => {
+                    projectsContainer.innerHTML += `<div class="bg-slate-800/40 p-6 rounded-lg border border-slate-700/80 flex flex-col group hover:border-amber-600/30 transition-all duration-300">
+                                                        <div class="flex items-start justify-between mb-4">
+                                                            <i data-lucide="code-2" class="w-9 h-9 text-amber-600 group-hover:scale-110 transition-transform duration-300"></i>
+                                                            <a href="${repo.html_url}" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-amber-600 transition-colors duration-300"><i data-lucide="external-link" class="w-6 h-6"></i></a>
+                                                        </div>
+                                                        <h3 class="text-lg font-semibold mb-2 group-hover:text-amber-600 transition-colors duration-300">${repo.name}</h3>
+                                                        <p class="text-slate-400 text-sm mb-4 leading-relaxed flex-grow">${repo.description || 'No description provided.'}</p>
+                                                        <div class="flex items-center justify-between pt-4 border-t border-slate-700/50 text-sm text-slate-400">
+                                                            <span>${repo.language || 'Code'}</span>
+                                                            <span class="flex items-center gap-1"><i data-lucide="star" class="w-4 h-4 text-yellow-500"></i> ${repo.stargazers_count}</span>
+                                                        </div>
+                                                    </div>`;
+                });
+            }
+
+            // --- Publications ---
+             const publicationsContainer = document.getElementById('publications-container');
+             publicationsData.forEach(pub => {
+                 publicationsContainer.innerHTML += `<div class="bg-slate-800/40 p-8 rounded-lg border border-slate-700/80 group hover:border-amber-600/30 transition-all duration-300">
+                                                        <div class="flex items-start gap-6">
+                                                            <div class="bg-gradient-to-br from-amber-600 to-amber-700 p-3 rounded-lg shadow-lg group-hover:scale-110 transition-transform duration-300 mt-1"><i data-lucide="award" class="w-6 h-6 text-white"></i></div>
+                                                            <div class="flex-1">
+                                                                <h3 class="text-xl font-semibold mb-1 text-slate-100">${pub.title}</h3>
+                                                                <div class="text-amber-600 font-medium mb-3">${pub.publisher}</div>
+                                                                <p class="text-slate-300 mb-4">${pub.description}</p>
+                                                                <a href="${pub.doi}" target="_blank" rel="noopener noreferrer" class="text-amber-600 hover:text-amber-500 font-semibold text-sm transition-colors duration-300 flex items-center gap-1 group/link">
+                                                                    View Publication <i data-lucide="arrow-right" class="w-4 h-4 group-hover/link:translate-x-1 transition-transform duration-300"></i>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                      </div>`;
+             });
+
+            // --- Footer ---
+            const currentYear = new Date().getFullYear();
+            document.getElementById('footer-text').textContent = `© ${currentYear} Barathi Kanna Saminathan.`;
+
+            // --- Lucide Icons ---
+            lucide.createIcons();
+
+            // --- Active Nav Link Highlighting ---
+            const navLinks = document.querySelectorAll('.nav-link');
+            const sections = document.querySelectorAll('section');
+            
+            window.addEventListener('scroll', () => {
+                let current = 'home';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    if (pageYOffset >= sectionTop - 150) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href').substring(1) === current) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+            // Initial check
+            window.dispatchEvent(new Event('scroll'));
+        });
+        
+        // --- Navbar Scroll Effect ---
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-black/80', 'backdrop-blur-xl', 'shadow-lg', 'border-b', 'border-slate-800/50');
+            } else {
+                navbar.classList.remove('bg-black/80', 'backdrop-blur-xl', 'shadow-lg', 'border-b', 'border-slate-800/50');
+            }
+        });
+    </script>
+</body>
+</html>
+
